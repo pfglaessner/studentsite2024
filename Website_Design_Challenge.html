@@ -1,0 +1,207 @@
+# Business Website Design Challenge
+
+## Prerequisites
+
+  1. ["Website Hosting" Exercise](/exercises/website-hosting/exercise.md)
+  2. ["Website Structure" Exercise](/exercises/website-structure/exercise.md)
+  3. ["Website Style" Exercise](/exercises/website-style/exercise.md)
+
+## Prompt
+
+You've been hired by a juice company to modernize their web presence. The company currently uses printed brochures and 
+in-store displays to communicate their menu of juice products to customers.
+
+Your mission is to convert their printed brochure into a website, so they can share their menu of juice 
+products with the world!
+
+![](brochure-inside.png)
+
+> NOTE: this prompt is fictional, however all menu items and images are copyright of [The Juice Laundry]
+(https://www.thejuicelaundry.com/about/menu), used here for instructional purposes only. 
+
+Feel free to alternatively use a different menu or brochure, as long as you include a photo of the original menu in 
+your website repository.
+
+Your website need not be an exact replica of the original brochure. It should draw inspiration from the brochure to 
+generally convey the same information. You are encouraged to make your own decisions about the website's layout and design. 
+Feel free to incorporate aspects of the original menu into a new design, as desired. 
+
+
+## Instructions
+
+### Making a Plan
+
+First, take a few moments to sketch your desired website layout and design onto a piece of paper or a whiteboard.
+ You can refer to this design sketch to keep you on track when developing the site. If you need to change designs later, 
+ that's fine. It's just helpful to have a plan before moving on to development. Optionally take a photo of, 
+ or otherwise document, your design mockup, and include it in your website repository for reference.
+
+
+### Using Provided Images
+
+You may use any of the [provided images](images/). To use the images, you can choose any one of the following approaches:
+
+  + A) Download or "clone" this entire course repository onto your computer, and copy / paste the relevant image files 
+  into your own local website repository; OR
+
+  + B) View any image on GitHub and click the "download" button to download that image file, then move it into your own 
+  local website repository; OR
+
+  + C) View any image on GitHub and right-click on it to "Copy Image Address" and use that URL as the HTML image source 
+  (no need to download any image files into your own local website repository)
+
+### Setting up the Repository
+
+Create a new repository on GitHub. Download or "clone" the repository onto your local computer. Open the repository 
+in a text editor, create a new "index.html" file, and auto-generate the default HTML scaffolding in that file.
+
+
+### Developing the Website
+
+Iteratively develop the contents of your "index.html" page, using HTML and CSS. It may be helpful to save your work at 
+certain milestones by making "commits" in GitHub Desktop software.
+
+You are encouraged to leverage [Twitter Bootstrap](https://getbootstrap.com/) or any other frameworks, as desired. 
+
+### Previewing Local Changes
+
+Open the "index.html" file with your browser to preview the changes locally. Make sure the site looks good locally 
+before moving on to hosting.
+
+### Deploying the Website
+
+Use GitHub Desktop to "commit" any final changes, and then push your changes to GitHub.
+
+In your repository settings on GitHub, configure GitHub Pages to host your website so it is publicly-accessible over the Internet.
+
+Note the URL of your hosted site, and use this URL for deliverable submission purposes, and for sharing with friends. 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!--
+      BOOTSTRAP NAV
+      https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">The Juice Laundry</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <img src="exercises/website-challenge/images/backgrounds/person-holding-bowl.jpg">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home Page</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Superfood Smoothies</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boosters</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acai Bowls & More</a>
+              </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--
+      PAGE CONTENTS
+    -->
+    <div class="container" style="margin-top:2em;">
+
+      <div>
+        <h1>Hello, world!</h1>
+      </div>
+
+
+      
+      
+      <!--
+
+        RESPONSIVE GRID OF CARDS
+
+        SEE:
+
+            https://getbootstrap.com/docs/5.0/layout/grid/
+
+            https://getbootstrap.com/docs/5.0/components/card/
+
+            https://getbootstrap.com/docs/5.0/components/card/#grid-cards
+
+      -->
+
+      <div class="row row-cols-3">
+
+          <div class="card col" style="width: 18rem; margin:20px;">
+              <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Superfood Smoothies</h5>
+                  <p class="card-text">Superfood Smoothies to power up your day!</p>
+              </div>
+          </div>
+
+          <div class="card col" style="width: 18rem; margin:20px;">
+              <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Boosters</h5>
+                  <p class="card-text">Boosters for that mid-day energy shot!</p>
+              </div>
+          </div>
+
+          <div class="card col" style="width: 18rem; margin:20px;">
+              <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Acai Bowls & More</h5>
+                  <p class="card-text">Full nutritional options to fill you up while giving you tons of energy!</p>
+              </div>
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <footer style="margin-top:2em; margin-bottom:2em;">
+        <hr>
+        &copy; Copyright 2023 Prof. MJ Rossetti |
+        <a href="https://github.com/prof-rossetti/">source</a>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        console.log("Thanks for the page visit!")
+
+    </script>
+  </body>
+</html>
